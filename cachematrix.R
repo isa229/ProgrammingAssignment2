@@ -1,12 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
-## This function allows me to create a matrix
-
-## Write a short comment describing this function
+## This function allows me to create a matrix, get the stored matrix, set and get its inverse through another function.
 
 makeCacheMatrix <- function(x = matrix()) {
         
-  inv <- matrix()     
+  inv <- matrix()    
   set <- function(y) {
         x <<- y
         inv <<- matrix()
@@ -20,10 +16,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function returns a matrix that is the inverse of a matrix 'x'. If it determines that the inverse was already computed, retrieves the stored inverse matrix. 
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         
   inv <- x$get_inv()
         
